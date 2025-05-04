@@ -144,7 +144,7 @@ export class AssetService extends BaseService {
     if (
       options.isArchived != undefined ||
       options.isFavorite != undefined ||
-      options.duplicateId != undefined ||
+      options.duplicateId !== undefined ||
       options.rating != undefined
     ) {
       await this.assetRepository.updateAll(ids, options);
